@@ -1,0 +1,40 @@
+.footer {
+  padding: 70px 0;
+  background-color: #242424;
+  &__social {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+  &__social-item {
+    text-indent: -9999px;
+    list-style: none;
+    transition: all 0.3s linear;
+    margin-right: 20px;
+  }
+  &__social-link {
+    width: 50px;
+    height: 50px;
+    display: block;
+    background-image: url(/i/raw_icons/sprite.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    &_fb {
+      background-position: 0 0;
+    }
+    &_tw {
+      background-position: -53px 0;
+    }
+    &_inst {
+      background-position: -103px 0;
+    }
+    &_viber {
+      background-position: -155px 0;
+    }
+  }
+  &__text {
+    text-align: center;
+    font-size: rem(18px);
+    color: #6c757d;
+  }
+}
