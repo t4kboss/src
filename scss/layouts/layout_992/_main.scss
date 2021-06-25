@@ -64,4 +64,8 @@
       flex: 0 0 49%;
     }
   }
+  &__wrap {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

@@ -162,3 +162,42 @@ $(".img-zoom").magnificPopup({
     preload: [0, 1],
   },
 });
+
+document.addEventListener("submit", handleSubmit);
+document.addEventListener("keyup", handleKeyup);
+
+function handleSubmit(e) {
+  // e.preventDefault();
+  const { target } = e;
+  if (target.name !== "contactform") {
+    return;
+  }
+  isValid = true;
+  const elements = [...target.elements];
+  console.log(elements);
+  elements.forEach((el) => {
+    if (el.id === "username" || el.id === "email") {
+      const val = el.value.trim();
+      if (!val || val.length < 3) {
+        isValid = false;
+        el.classList.add("invalid");
+        el.placeholder = "Enter at least three characters";
+      }
+    }
+  });
+  if (!isValid) {
+    e.preventDefault();
+  }
+}
+function handleKeyup(e) {
+  const { target } = e;
+  if (!target.type === "text") return;
+  let val = target.value.trim().length;
+  if (val === 3) {
+    isValid = true;
+
+    target.classList.remove("invalid");
+    target.classList.add("valid");
+    console.log(target.classList);
+  }
+}

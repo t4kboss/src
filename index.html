@@ -667,31 +667,34 @@
             </div>
           </div>
           <div class="contact__form-wrap">
-            <form class="contact__form" action="#" method="POST">
+            <form
+              class="contact__form"
+              action="#"
+              method="POST"
+              name="contactform"
+              autocomplete="off"
+            >
               <input
                 class="contact__input contact__input_half"
                 type="text"
-                name="name"
-                id="name"
                 placeholder="Your name*"
+                id="username"
               />
+
               <input
-                name="email"
                 id="email"
                 type="email"
                 class="contact__input contact__input_half"
                 placeholder="Your Email*"
-                required=""
               />
+
               <input
                 type="text"
                 class="contact__input"
                 id="subject"
                 placeholder="Your Subject.."
-                required=""
               />
               <textarea
-                name="comments"
                 id="comments"
                 rows="4"
                 class="contact__input"

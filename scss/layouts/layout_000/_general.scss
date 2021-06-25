@@ -59,86 +59,6 @@ img {
   }
 }
 
-.about-me {
-  padding-top: 100px;
-  margin-bottom: 70px;
-  &__inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    // padding-left: 15px;
-    // padding-right: 15px;
-  }
-  &__pic {
-    padding: 4px;
-    background-color: #fff;
-    border: 1px solid #dee2e6;
-    border-radius: 4px;
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 30px;
-  }
-  &__title {
-    font-family: $fontTitle;
-    font-size: rem(32px);
-    font-weight: 500;
-    margin-bottom: 30px;
-    &_bold {
-      font-weight: 700;
-    }
-  }
-  &__subtitle {
-    font-family: $fontTitle;
-    font-size: rem(24px);
-    font-weight: 500;
-    margin-bottom: 30px;
-    &_red {
-      color: $red;
-    }
-  }
-  &__text {
-    color: $text-grey;
-    font-weight: 400;
-    line-height: 1.5;
-    margin-bottom: 16px;
-  }
-  &__social {
-    display: flex;
-    margin-bottom: 50px;
-    justify-content: flex-start;
-  }
-  &__social-item {
-    text-indent: -9999px;
-    list-style: none;
-    transition: all 0.3s linear;
-    margin-right: 15px;
-    &:hover {
-      animation: social-lr 1s ease-in-out;
-    }
-  }
-  &__social-link {
-    width: 32px;
-    height: 32px;
-    display: block;
-    background-image: url(/i/raw_icons/sprite.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    &_fb {
-      background-position: 0 0;
-    }
-    &_tw {
-      background-position: -66px 0;
-    }
-    &_inst {
-      background-position: -33px 0;
-    }
-    &_viber {
-      background-position: -99px 0;
-    }
-  }
-}
-
 .back {
   text-align: center;
   position: fixed;
@@ -160,5 +80,19 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0% 0;
+  }
+}
+
+.invalid {
+  background-color: lightcoral !important;
+  &::placeholder {
+    color: lightcyan !important;
+  }
+}
+
+.valid {
+  background-color: rgb(158, 231, 182) !important;
+  &::placeholder {
+    color: rgb(31, 43, 43) !important;
   }
 }
