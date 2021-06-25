@@ -1,0 +1,77 @@
+.container {
+  max-width: 960px;
+}
+.about-me {
+  &__inner {
+    flex-direction: row;
+    gap: 30px;
+  }
+  &__pic {
+    flex: 1;
+  }
+  &__text-block {
+    flex: 1;
+  }
+  &__img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.services {
+  width: 100%;
+  &__flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__content {
+    flex: 0 0 32.333333%;
+    max-width: 33.333333%;
+    &:hover .services__border {
+      width: 60px;
+    }
+  }
+}
+.hire {
+  &__btn {
+    &:hover {
+      background-color: #d8576f;
+      color: #f3f3f3;
+    }
+  }
+}
+.work {
+  &__item {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  &__btns-link {
+    &:hover {
+      background-color: $red;
+      color: $white;
+    }
+  }
+}
+
+.blog {
+  &__item {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
+
+.contact {
+  &__input {
+    &_half {
+      flex: 0 0 49%;
+    }
+  }
+}
+.footer {
+  &__social-item {
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
