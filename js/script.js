@@ -163,18 +163,18 @@ $(".img-zoom").magnificPopup({
   },
 });
 
+////////////////FORM VALIDATE//////////////////
+
 document.addEventListener("submit", handleSubmit);
 document.addEventListener("keyup", handleKeyup);
 
 function handleSubmit(e) {
-  // e.preventDefault();
   const { target } = e;
   if (target.name !== "contactform") {
     return;
   }
   isValid = true;
   const elements = [...target.elements];
-  console.log(elements);
   elements.forEach((el) => {
     if (el.id === "username" || el.id === "email") {
       const val = el.value.trim();
@@ -191,13 +191,13 @@ function handleSubmit(e) {
 }
 function handleKeyup(e) {
   const { target } = e;
-  if (!target.type === "text") return;
+
+  if (target.id !== "username" && target.id !== "email") {
+    return;
+  }
   let val = target.value.trim().length;
   if (val === 3) {
     isValid = true;
-
     target.classList.remove("invalid");
-    target.classList.add("valid");
-    console.log(target.classList);
   }
 }
